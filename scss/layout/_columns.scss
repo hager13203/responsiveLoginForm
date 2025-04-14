@@ -1,0 +1,32 @@
+@mixin LayOut($ColNums: 12, $ScreenName: "", $BreakPoint: 0px) {
+    @if ($ScreenName== "") {
+      @for $i from 1 through $ColNums {
+        .col-#{$i} {
+          width: $i/$ColNums * 100%;
+          padding: 0 10px;
+
+        }
+      }
+    } @else {
+      @media (min-width: $BreakPoint) {
+        @for $i from 1 through $ColNums {
+          .col-#{$ScreenName}-#{$i} {
+            width: $i/$ColNums * 100%;
+            padding: 0 10px;
+  
+        }
+          
+        }
+      }
+    }
+  }
+  
+  // Default columns
+  @include LayOut();
+  
+  // Responsive columns
+  @include LayOut(12, "sm", 576px);
+  @include LayOut(12, "md", 768px);
+  @include LayOut(12, "lg", 992px);
+  @include LayOut(12, "xl", 1200px);
+  
