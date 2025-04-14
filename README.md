@@ -8,4 +8,7 @@ The project follows a structured SASS architecture (e.g., using partials like `_
 - SASS (SCSS syntax)
 - CSS3
 
-## 📁 SASS Folder Structure
+## 📱 Features
+- Responsive design for all screen sizes
+- Clean and minimalistic UI
+- SASS modular structure
